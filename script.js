@@ -17,7 +17,7 @@ const cnv = document.getElementById("canvas");
 
   function balaoFala(){
     ctx.fillStyle = "#c1e678"
-    ctx.fillRect(600 , 450 , 270 , 100) //x , y , largura , altura
+    ctx.fillRect(600 , 450 , 350 , 100) //x , y , largura , altura
     ctx.fillStyle = 'black'
     ctx.font = '15px Times New Roman'
     ctx.fillText(texto1 , 605 , 470)
