@@ -4,12 +4,14 @@ const cnv = document.getElementById("canvas");
   // Criando o objeto de imagem
   const img = new Image();
   img.src = 'tartaruga.png'; // Caminho da sua imagem
+  const coracao = new Image();
+  coracao.src = 'heart.png'
 
   // Definir as coordenadas iniciais
   let x = 0;  // Posição inicial no eixo X
   const y = cnv.height / 2 - 225;  // Meio da tela, ajustado para o tamanho da tartaruga
   const targetX = cnv.width / 2 - 150; // Meio da tela (horizontal), considerando o tamanho da tartaruga **como carambolas isso funciona???
-  const speed = 2; // Velocidade de movimento da tartaruga
+  const speed = 5; // Velocidade de movimento da tartaruga
   const texto1 = "Hey! Soube que você é uma pessoa mais"
   const texto2 = "que especial para uma menina aí."
   const texto3 = "Ela tem algo a te dizer, clique no coração e"
@@ -24,6 +26,7 @@ const cnv = document.getElementById("canvas");
     ctx.fillText(texto2 , 605 , 490)
     ctx.fillText(texto3 , 605 , 510)
     ctx.fillText(texto4 , 605 , 530)
+    let heart = ctx.drawImage(coracao , 390 , 900 , 200 , 200)
   }
   
 
