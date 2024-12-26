@@ -48,7 +48,7 @@ function animate() {
   } else {
     balaoFala();
     const divHtml = document.getElementById("div");
-    const comandoHTML = `<button id='botao' style="background-image:url('heart.png'); width:120px; height:120px; background-color:#fcf8bb; border:none" onclick="redirecionar()"></button>`;
+    const comandoHTML = `<button id='botao' style="background-image:url('heart.png'); width:120px; height:120px; background-color:#fcf8bb; border:none" onclick="execRedirecionar()"></button>`;
     divHtml.innerHTML = comandoHTML;
   }
 
@@ -59,3 +59,24 @@ function animate() {
 img1.onload = function () {
   requestAnimationFrame(animate);
 };
+
+frameCount = 0  //zerar o contador
+
+function redirecionar(){
+  ctx.clearRect(0, 0, cnv.width, cnv.height); // Limpa o canvas antes de redesenhar
+  if (x < cnv.width) x += speed;
+  if (x > cnv.width) x -= speed;
+  const currentImagem = (frameCount % 20 < 10) ? img1 : img2;
+  ctx.drawImage(currentImagem, x, y, 300, 450);
+  if (x !== cnv.width) {
+    requestAnimationFrame(redirecionar);
+  }
+  else{
+    window.location.href = "mensagem.html"
+  }
+  frameCount++;
+}
+
+function execRedirecionar(){
+  requestAnimationFrame(redirecionar);
+}
