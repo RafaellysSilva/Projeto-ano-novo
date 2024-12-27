@@ -7,10 +7,9 @@
     height: 75%;
     text-align: center;
     padding: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
     border-radius: 5px;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
 }
 
 body{
