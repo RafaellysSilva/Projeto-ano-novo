@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloMensagem.css">
     <title>Document</title>
 </head>
-<body style="background-color: blueviolet;">
-    
+<body>
+    <pre id="folha"></pre>
+    <script>
+        const texto = `Feliz ano novo, meu amor!✨
+    Eu te amo muito. 
+    Obrigada por ter sido a melhor 
+    coisa que me ocorreu em 2024.
+    Obrigada por cada momento que
+    passamos juntas💖.
+    Quero que esse ano que está 
+    iniciando agora seja repleto 
+    de alegria para você, pois 
+    você merece muito. 
+    Você é uma pessoa incrível, 
+    inteligente, linda, engraçada,
+    legal.... Tudo isso é pouco para
+    te descrever nunca duvide disso.
+    Na verdade, tudo isso é pouco 
+    para descrever te descrever.
+    Espero que você tenha gostado rs. 
+    Com carinho, Rafaelly.`
+        
+        let indice = 0
+        const elemento = document.getElementById("folha")
+        function escrever(){
+            if (indice < texto.length){
+                elemento.textContent += texto[indice]
+                indice++
+                setTimeout(escrever , 50)
+            }
+        }
+        escrever()
+    </script>
 </body>
 </html>

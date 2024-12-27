@@ -14,7 +14,7 @@ const targetX = cnv.width / 2 - 150; // Meio da tela (horizontal), considerando 
 const speed = 2; // Velocidade de movimento da tartaruga
 const texto1 = "Hey! Soube que você é uma pessoa mais";
 const texto2 = "que especial para uma menina aí.";
-const texto3 = "Ela tem algo a te dizer, clique no coração e";
+const texto3 = "Ela tem algo a te dizer. Clique no coração e";
 const texto4 = "descubra!";
 
 function balaoFala() {
