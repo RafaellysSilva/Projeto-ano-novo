@@ -12,20 +12,23 @@ let x = 0;  // Posição inicial no eixo X
 const y = cnv.height / 2 - 225;  // Meio da tela, ajustado para o tamanho da tartaruga
 const targetX = cnv.width / 2 - 150; // Meio da tela (horizontal), considerando o tamanho da tartaruga
 const speed = 1; // Velocidade de movimento da tartaruga
-const texto1 = "Hey! Soube que você é uma pessoa mais";
-const texto2 = "que especial para uma menina aí.";
-const texto3 = "Ela tem algo a te dizer. Clique no coração e";
-const texto4 = "descubra!";
+const texto1 = "Hey! Soube que você é uma pessoa" 
+const texto2 = "mais que especial para uma";
+const texto3 = "menina aí.";
+const texto4 = "Ela tem algo a te dizer. "
+const texto5 = "Clique no coração e descubra!";
+
 
 function balaoFala() {
   ctx.fillStyle = "#c1e678";
-  ctx.fillRect(600, 400, 400, 150); // x , y , largura , altura
+  ctx.fillRect(600, 400, 400, 180); // x , y , largura , altura
   ctx.fillStyle = 'black';
   ctx.font = '22px Times New Roman';
   ctx.fillText(texto1, 605, 440);
   ctx.fillText(texto2, 605, 470);
   ctx.fillText(texto3, 605, 500);
   ctx.fillText(texto4, 605, 530);
+  ctx.fillText(texto5, 605, 560);
 }
 
 let frameCount = 0; // Para controlar o intervalo de troca de imagem
