@@ -3,31 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estiloMensagem.css">
     <title>Document</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            background-image: url('ceuEstrela.png');
+            background-size: cover;
+            height: 100vh; /* Garante que o body ocupe a tela inteira */
+        }
+
+        #folha {
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 4vw; /* A fonte será responsiva e se ajustará conforme a largura da tela */
+            background-color: #e1f39f; 
+            width: 80%; /* A largura será 80% da tela */
+            max-width: 900px; /* Tamanho máximo para a largura da div */
+            height: auto; /* A altura será ajustada automaticamente conforme o conteúdo */
+            text-align: center;
+            padding: 20px; /* Aumentei o padding para que o texto fique mais espaçado */
+            border-radius: 10px;
+            word-wrap: break-word; /* Quebra de palavras longas */
+            overflow-wrap: break-word; /* Para garantir que palavras longas sejam quebradas */
+            white-space: pre-wrap; /* Garante que o texto seja exibido corretamente, respeitando quebras de linha */
+        }
+        
+    </style>
 </head>
 <body>
     <pre id="folha"></pre>
+
     <script>
-        const texto = `Feliz ano novo, meu amor!✨
-    Eu te amo muito. 
-    Obrigada por ter sido a melhor 
-    coisa que me ocorreu em 2024.
-    Obrigada por cada momento 
-    que passamos juntas💖.
-    Quero que esse ano que está 
-    iniciando agora seja repleto 
-    de alegria para você, pois 
-    você merece muito. 
-    Você é uma pessoa incrível, 
-    inteligente, linda, engraçada,
-    legal....Na verdade, tudo 
-    isso é pouco para te descrever.
-    Nunca duvide disso.
+        const texto = `Feliz ano novo, Marietti!✨
+    Obrigada por ter sido a 
+    melhor coisa que me 
+    ocorreu em 2024.
+    Obrigada por cada 
+    momento que passamos 
+    juntas.
+    Quero que esse ano que 
+    está iniciando agora 
+    seja repleto de alegria 
+    para você, pois você 
+    merece muito. 
+    Você é uma pessoa 
+    incrível, inteligente, 
+    linda, engraçada,
+    legal.... Na verdade, 
+    tudo isso é pouco para
+    te descrever. Nunca 
+    duvide disso.
     Espero que você tenha 
     gostado rs.♡
     Com carinho, Rafaelly.`
-        
+
         let indice = 0
         const elemento = document.getElementById("folha")
         function escrever(){
